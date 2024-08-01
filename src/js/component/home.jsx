@@ -8,8 +8,10 @@ const Home =() =>{
 	return (
 		<div className="container">
 			<h1>My Todos</h1>
+			<div class="container">
 				<ul>
-					<li><input 
+					<li class="row"><input 
+					class="col-12"
 					type="text" 
 					value= {inputValue}
 					onChange=
@@ -35,15 +37,17 @@ const Home =() =>{
 				placeholder="Next Task"></input>
 				</li>
 					{todos.map((task, index)=>(
-					<li>
+					<li class="row">
+						<div class="col-11">{task}</div>
 					
-					<i class="fas fa-trash-alt" 
+					<i id="icon" class="fas fa-trash-alt col-1 float-right" 
 					onClick={() => setTodos(todos.filter((t,currentIndex)=> index!=currentIndex))}
-					></i>{task}</li>
+					></i></li>
 					))
 					}
 				</ul>
-				<div>23 tags</div>
+				</div>
+				<div>{todos.length}tags</div>
 				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 		</div>
 	

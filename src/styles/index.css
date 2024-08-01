@@ -4,7 +4,7 @@ body{
     margin-top:100px;
 }
 ul{
-    padding: 0;
+    padding: 5px;
     margin-bottom: 0;
 }
 ul li {
@@ -16,4 +16,7 @@ h1 {text-align: center}
 
 input{border: none;
 width: 100%;
+}
+#icon {
+   
 }
